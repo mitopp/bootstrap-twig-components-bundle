@@ -1,0 +1,42 @@
+{
+    "name": "mitopp/bootstrap-twig-components-bundle",
+    "description": "Useful Twig Components for the Bootstrap framework.",
+    "type": "symfony-bundle",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mitopp\\BootstrapTwigComponentsBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mitopp\\BootstrapTwigComponentsBundle\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Michael Topp",
+            "email": "michael.topp@outlook.de"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "symfony/framework-bundle": "^6.4|^7.0"
+    },
+    "extra": {
+        "cotor": {
+            "extensions": {
+                "phpstan/phpstan": {
+                    "phpstan/phpstan-deprecation-rules": "^2.0"
+                }
+            },
+            "friendsofphp/php-cs-fixer": "^3.92",
+            "phpstan/phpstan": "^2.1",
+            "phpunit/phpunit": "^11.5",
+            "rector/rector": "^2.2",
+            "vincentlanglet/twig-cs-fixer": "^3.11"
+        }
+    }
+}

@@ -4,7 +4,7 @@
 > [!WARNING]  
 > This Bundle is experimental and subject to change in a future release.
 
-This bundle allows you to create robust and reusable [Twig components](https://symfony.com/bundles/ux-twig-component/current/index.html), styled by the [Bootstrap Framework](https://getbootstrap.com/). This bundle does not deliver Bootstrap CSS/JavaScript itself. This keeps control with the user.
+This bundle allows you to create robust and reusable [Twig components](https://symfony.com/bundles/ux-twig-component/current/index.html), styled by the [Bootstrap Framework](https://getbootstrap.com/). This bundle does not deliver Bootstrap CSS/JavaScript itself. This keeps control of the user.
 
 ## Requirements
 
@@ -39,7 +39,7 @@ return [
 ];
 ```
 
-That's all! You are now ready to use TwigComponents in you application.
+That's all! You are now ready to use TwigComponents in your application.
 
 ## Components
 

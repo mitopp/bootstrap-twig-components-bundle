@@ -7,6 +7,7 @@ namespace Mitopp\BootstrapTwigComponentsBundle\Tests\Common;
 use Mitopp\BootstrapTwigComponentsBundle\BootstrapTwigComponentsBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
+use Symfony\Bundle\TwigBundle\TwigBundle;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
@@ -19,6 +20,7 @@ class TestKernel extends Kernel
     public function registerBundles(): iterable
     {
         yield new FrameworkBundle();
+        yield new TwigBundle();
         yield new BootstrapTwigComponentsBundle();
     }
 
@@ -27,9 +29,5 @@ class TestKernel extends Kernel
         $container->extension('framework', [
             'test' => true,
         ]);
-
-        //        $container->extension('symfonycasts_object_translation', [
-        //            'translation_class' => Translation::class,
-        //        ]);
     }
 }

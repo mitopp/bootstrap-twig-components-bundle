@@ -23,7 +23,11 @@
     ],
     "require": {
         "php": ">=8.2",
-        "symfony/framework-bundle": "^6.4|^7.0"
+        "symfony/framework-bundle": "^7.0",
+        "symfony/ux-twig-component": "^2.31",
+        "symfony/twig-bundle": "^7.0",
+        "twig/html-extra": "^3.22",
+        "twig/extra-bundle": "^3.22"
     },
     "extra": {
         "cotor": {

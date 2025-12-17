@@ -1,0 +1,43 @@
+{#
+name:                       Button
+props:
+    type (string|null)      HTML 'type' attribute. Default: 'button'.
+    color (string)          Contextual color. Default: 'default'.
+    outline (boolean)       Whether to use outline style. Default: false.
+    size (string|null)      Size ('lg', 'sm', or null for default). Default: null.
+    disabled (boolean)      Whether the button is disabled. Default: false.
+    content (string)        Default text content. Default: ''.
+blocks:
+    content                 Button content (text, icons, etc.). Overrides 'content' property.
+#}
+
+{%- props
+    tag = 'button',
+    type = 'button',
+    href = '#',
+    color = 'default',
+    outline = false,
+    size = null,
+    disabled = false,
+    content = '', -%}
+
+{%- set classes = html_classes({
+    btn: true,
+    ('btn-' ~ (outline ? 'outline-' : '') ~ color): true,
+    ('btn-' ~ size): size is not null,
+}) -%}
+
+{%- set defaults = {
+    class: classes,
+    type: type,
+} -%}
+
+{% if disabled %}
+    {% set defaults = defaults|merge({disabled: true}) %}
+{% endif %}
+
+<button {{ attributes.defaults(defaults) }}>
+    {%- block content -%}
+        {{- content -}}
+    {%- endblock -%}
+</button>

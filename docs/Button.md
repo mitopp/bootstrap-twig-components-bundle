@@ -2,7 +2,7 @@
 
 Displays a button, used for actions, submitting forms, etc.
 
-~~~twig
+~~~html
 <twig:bs:Button color="primary" content="Primary button" />
 <twig:bs:Button color="secondary" content="Secondary button" class="ms-2" />
 ~~~
@@ -36,7 +36,7 @@ Use Twig blocks to inject more complex content:
 
 Uses default properties (`type="button"`, `color="default"`").
 
-~~~twig
+~~~html
 <twig:bs:Button content="Default button" />
 ~~~
 
@@ -44,7 +44,7 @@ Uses default properties (`type="button"`, `color="default"`").
 
 Use the `type` property for different button types.
 
-~~~twig
+~~~html
 <twig:bs:Button type="submit" color="success" content="Submit" />
 <twig:bs:Button type="reset" color="secondary" content="Reset" />
 ~~~
@@ -53,7 +53,7 @@ Use the `type` property for different button types.
 
 Use the `color` property for different styles.
 
-~~~twig
+~~~html
 <twig:bs:Button color="primary" content="Primary" />
 <twig:bs:Button color="secondary" content="Secondary" />
 <twig:bs:Button color="success" content="Success" />
@@ -70,7 +70,7 @@ If there are additional colors in a customized version of the Bootstrap Framewor
 
 Set `outline="true"`.
 
-~~~twig
+~~~html
 <twig:bs:Button color="primary" outline="true" content="Primary" />
 <twig:bs:Button color="secondary" outline="true" content="Secondary" />
 <twig:bs:Button color="success" outline="true" content="Success" />
@@ -85,7 +85,7 @@ Set `outline="true"`.
 
 Use the `size` property for different sizes.
 
-~~~twig
+~~~html
 <twig:bs:Button size="lg" color="primary" content="Large button" />
 <twig:bs:Button size="sm" color="primary" content="Small button" />
 ~~~
@@ -96,7 +96,7 @@ If there are additional sizes in a customized version of the Bootstrap Framework
 
 Set `disabled="true"`.
 
-~~~twig
+~~~html
 <twig:bs:Button color="primary" disabled="true" content="Disabled button" />
 ~~~
 
@@ -104,8 +104,32 @@ Set `disabled="true"`.
 
 Use the `content` block to inject more complex content like text, icons, etc.
 
-~~~twig
+~~~html
 <twig:bs:Button color="primary">
     <strong>Delete</strong> me
 </twig:bs:Button>
+~~~
+
+### Additional attributes
+
+Sometimes you need additional attributes, for example, to control modal windows. These can simply be passed as additional attributes to the Twig component.
+
+~~~html
+<!-- Button trigger modal -->
+<twig:bs:Button color="primary" data-bs-toggle="modal" data-bs-target="#exampleModal" content="Launch demo modal"/>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <twig:bs:Button color="close" data-bs-dismiss="modal" aria-label="Close"/>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+        </div>
+    </div>
+</div>
 ~~~

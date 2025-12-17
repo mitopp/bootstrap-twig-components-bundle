@@ -2,3 +2,4 @@ vendor/
 .phpunit.cache/
 .php-cs-fixer.cache
 .twig-cs-fixer.cache
+composer.lock

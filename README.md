@@ -49,6 +49,7 @@ That's all! You are now ready to use TwigComponents in your application.
   - [ ] [Link]() *TBD*
 - [ ] [Card]() *TBD*
 - [ ] [Icon]() *TBD*
+- [ ] [Modal]() *TBD*
 - [ ] [Toast]() *TBD*
 
 ## Contributing

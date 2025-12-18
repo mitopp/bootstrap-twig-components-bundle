@@ -9,12 +9,12 @@ props:
     content (string)        Default text content. Default: ''.
 blocks:
     content                 Button content (text, icons, etc.). Overrides 'content' property.
+children:
+    Close                   Special close button.
 #}
 
 {%- props
-    tag = 'button',
     type = 'button',
-    href = '#',
     color = 'default',
     outline = false,
     size = null,
@@ -32,11 +32,14 @@ blocks:
     type: type,
 } -%}
 
+{#- Merge defaults from childs -#}
+{%- set defaults = defaults|merge(_defaults|default({})) -%}
+
 {% if disabled %}
     {% set defaults = defaults|merge({disabled: true}) %}
 {% endif %}
 
-<button {{ attributes.defaults(defaults) }}>
+<button {{- attributes.defaults(defaults) }}>
     {%- block content -%}
         {{- content -}}
     {%- endblock -%}

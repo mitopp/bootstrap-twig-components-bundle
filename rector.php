@@ -10,6 +10,9 @@ return RectorConfig::configure()
         __DIR__ . '/src',
         __DIR__ . '/tests',
     ])
+    ->withSkip([
+        __DIR__ . '/config/reference.php',
+    ])
     ->withComposerBased(
         twig: true,
         phpunit: true,

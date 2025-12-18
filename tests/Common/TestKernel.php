@@ -33,5 +33,7 @@ class TestKernel extends Kernel
         $container->extension('framework', [
             'test' => true,
         ]);
+
+        $builder->setParameter('kernel.secret', 'test');
     }
 }

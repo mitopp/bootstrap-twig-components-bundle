@@ -14,9 +14,7 @@ children:
 #}
 
 {%- props
-    tag = 'button',
     type = 'button',
-    href = '#',
     color = 'default',
     outline = false,
     size = null,
@@ -41,7 +39,7 @@ children:
     {% set defaults = defaults|merge({disabled: true}) %}
 {% endif %}
 
-<button {{ attributes.defaults(defaults) }}>
+<button {{- attributes.defaults(defaults) }}>
     {%- block content -%}
         {{- content -}}
     {%- endblock -%}

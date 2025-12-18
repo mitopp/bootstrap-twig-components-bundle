@@ -5,16 +5,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Mitopp\\BootstrapTwigComponentsBundle\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Mitopp\\BootstrapTwigComponentsBundle\\Tests\\": "tests/"
-        }
-    },
+    "homepage": "https://github.com/mitopp/bootstrap-twig-components-bundle",
     "authors": [
         {
             "name": "Michael Topp",
@@ -29,6 +20,22 @@
         "twig/html-extra": "^3.22",
         "twig/extra-bundle": "^3.22"
     },
+    "require-dev": {
+        "symfony/dom-crawler": "^7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mitopp\\BootstrapTwigComponentsBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mitopp\\BootstrapTwigComponentsBundle\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
     "scripts": {
         "check": [
             "@composer validate --strict",
@@ -39,6 +46,9 @@
             "./tools/rector --dry-run",
             "./tools/phpunit"
         ]
+    },
+    "scripts-descriptions": {
+        "check": "Run all custom defined checks, similar to CI."
     },
     "extra": {
         "cotor": {

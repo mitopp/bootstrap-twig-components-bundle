@@ -12,6 +12,8 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\HttpKernel\Kernel;
+use Symfony\UX\TwigComponent\TwigComponentBundle;
+use Twig\Extra\TwigExtraBundle\TwigExtraBundle;
 
 class TestKernel extends Kernel
 {
@@ -21,6 +23,8 @@ class TestKernel extends Kernel
     {
         yield new FrameworkBundle();
         yield new TwigBundle();
+        yield new TwigComponentBundle();
+        yield new TwigExtraBundle();
         yield new BootstrapTwigComponentsBundle();
     }
 

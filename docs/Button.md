@@ -68,7 +68,7 @@ Use the `color` property for different styles.
 <twig:bs:Button color="dark" content="Dark"/>
 ~~~
 
-If there are additional colors in a customized version of the Bootstrap Framework, these can naturally also be used.
+If there are additional colors in a customized version of the Bootstrap Framework, these can naturally also be used. (See [Color Variants](ColorVariants.md) for more information.)
 
 ### Outline variants
 

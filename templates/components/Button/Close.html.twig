@@ -1,0 +1,17 @@
+{#
+name:                       Close
+parent:                     Button
+props:
+    label (string)          Aria-Label for screen readers. Default: 'Close'.
+#}
+
+{% extends '@BootstrapTwigComponents/components/Button.html.twig' %}
+
+{%- props
+    color = 'close',
+    label = 'Close',
+-%}
+
+{%- set _defaults = {
+    'aria-label': label,
+} -%}

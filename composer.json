@@ -29,6 +29,17 @@
         "twig/html-extra": "^3.22",
         "twig/extra-bundle": "^3.22"
     },
+    "scripts": {
+        "check": [
+            "@composer validate --strict",
+            "@composer audit",
+            "./tools/php-cs-fixer check",
+            "./tools/twig-cs-fixer lint",
+            "./tools/phpstan analyse",
+            "./tools/rector --dry-run",
+            "./tools/phpunit"
+        ]
+    },
     "extra": {
         "cotor": {
             "extensions": {

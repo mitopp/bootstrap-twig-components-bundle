@@ -35,7 +35,7 @@ Use Twig blocks to inject more complex content:
 
 ### Default
 
-Uses default properties (`type="button"`, `color="default"`").
+Uses default properties (`type="button"`, `color="default"`).
 
 ~~~html
 
@@ -112,7 +112,6 @@ Set `disabled="true"`.
 Use the `content` block to inject more complex content like text, icons, etc.
 
 ~~~html
-
 <twig:bs:Button color="primary">
     <strong>Delete</strong> me
 </twig:bs:Button>

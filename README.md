@@ -43,7 +43,7 @@ That's all! You are now ready to use TwigComponents in your application.
 
 ## Components
 
-- [ ] [Alert]() *TBD*
+- [x] [Alert](docs/Alert.md) for contextual feedback messages.
 - [x] [Button](docs/Button.md) for actions in forms, dialogs, and more.
   - [ ] [Link]() *TBD*
 - [ ] [Card]() *TBD*

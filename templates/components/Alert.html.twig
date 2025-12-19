@@ -1,0 +1,38 @@
+{#
+name:                       Alert
+props:
+    color (string)          Contextual color. Default: 'default'.
+    dismissible (boolen)    Whether the alert can be dismiss inline. Default: false.
+    content (string)        Default text content. Default: ''.
+blocks:
+    content                 Button content (text, icons, etc.). Overrides 'content' property.
+depends:
+    dismissible             Button:Close
+#}
+
+{%- props
+    color = 'default',
+    dismissible = false,
+    content = '', -%}
+
+{%- set classes = html_classes({
+    alert: true,
+    ('alert-' ~ color): true,
+    ('alert-dismissible'): dismissible,
+}) -%}
+
+{%- set defaults = {
+    class: classes,
+    role: 'alert',
+} -%}
+
+<div {{- attributes.defaults(defaults) }}>
+    {%- block content -%}
+        {{- content -}}
+    {%- endblock -%}
+    {% block dismissible -%}
+        {%- if dismissible -%}
+            <twig:bs:Button:Close data-bs-dismiss="alert"/>
+        {%- endif -%}
+    {% endblock -%}
+</div>

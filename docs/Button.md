@@ -153,3 +153,14 @@ Sometimes you need additional attributes, for example, to control modal windows.
 
 <twig:bs:Button:Close/>
 ~~~
+
+### Button with icon
+
+Additional classes can be added to customize its appearance. In this example, we use the `ms-0 ms-sm-1 d-none d-sm-inline-block` class to change the behavior of the label on small screens.
+
+~~~html
+<twig:bs:Button color="info">
+    <twig:bs:Icon name="bi bi-heart-fill text-danger"/>
+    <span class="ms-0 ms-sm-1 d-none d-sm-inline-block">Like</span>
+</twig:bs:Button>
+~~~

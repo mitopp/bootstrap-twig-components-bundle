@@ -44,4 +44,26 @@ final class ButtonTest extends AbstractComponentsTestCase
         $this->assertSame('button', $component->attr('type'));
         $this->assertSame('Close modal', $component->attr('aria-label'));
     }
+
+    public function testButtonWithEmbeddedIconRenders(): void
+    {
+        $icon = $this->renderTwigComponent(
+            name: 'Icon',
+            data: [
+                'name' => 'fas fa-user',
+            ],
+        );
+        $button = $this->renderTwigComponent(
+            name: 'Button',
+            data: [
+                'color' => 'primary',
+            ],
+            content: (string) $icon,
+        );
+
+        $crawler = $button->crawler();
+
+        $this->assertCount(1, $component = $crawler->filterXPath('//button'));
+        $this->assertSame('icon fas fa-user', $component->filterXPath('//i')->attr('class'));
+    }
 }

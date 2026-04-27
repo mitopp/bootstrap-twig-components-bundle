@@ -6,6 +6,8 @@
 
 This bundle allows you to create robust and reusable [Twig components](https://symfony.com/bundles/ux-twig-component/current/index.html), styled by the [Bootstrap Framework](https://getbootstrap.com/). This bundle does not deliver Bootstrap CSS/JavaScript itself. This keeps control of the user.
 
+The bundle is kept simple and without strict configuration. This allows customizations to the Bootstrap Framework to be largely resolved.
+
 ## Requirements
 
 - PHP v8.2.x
@@ -47,7 +49,7 @@ That's all! You are now ready to use TwigComponents in your application.
 - [x] [Button](docs/Button.md) for actions in forms, dialogs, and more.
   - [ ] [Link]() *TBD*
 - [ ] [Card]() *TBD*
-- [ ] [Icon]() *TBD*
+- [x] [Icon](docs/Icon.md) for displaying icons. 
 - [ ] [Modal]() *TBD*
 - [ ] [Toast]() *TBD*
 

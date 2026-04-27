@@ -1,0 +1,21 @@
+{#
+name:                       Icon
+props:
+    name (string)           Name or identifier of the icon. Default: ''
+#}
+
+{%- props
+    name = '',
+-%}
+
+{%- set classes = html_classes({
+    icon: true,
+    ('' ~ name): true,
+}) -%}
+
+{%- set defaults = {
+    class: classes,
+    'aria-hidden': 'true',
+} -%}
+
+<i {{- attributes.defaults(defaults) -}}></i>
